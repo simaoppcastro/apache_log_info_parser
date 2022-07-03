@@ -73,5 +73,10 @@ def main(file_path):
     # debug
     print(ip_counter)
     
+    # print(type(Counter(re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', open(file_path, 'r').read()))))
+    # print(Counter(re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', open(file_path, 'r').read())).elements())
+
+    for ip in ip_counter.elements(): print(str(ip) + str(ip_counter[ip]))
+    
 if __name__ == '__main__':
     main(file_path='log.txt')
